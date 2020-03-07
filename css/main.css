@@ -1,3 +1,21 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/* COLORS
+
+lit-gry: #BDBDBD
+drk-gry: #1F1F1F
+lit-grn: #36B3AC
+
+*/
+
+
+
+.pp {
+	background-color: slateblue;
+}
+
+header p {
+	font-family: 'Montserrat Subrayada', sans-serif;
+}
+
