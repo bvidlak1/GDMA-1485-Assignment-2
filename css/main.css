@@ -1,21 +1,438 @@
 @charset "UTF-8";
 /* CSS Document */
 
-/* COLORS
+/* 
+
+=====COLORS=====
 
 lit-gry: #BDBDBD
 drk-gry: #1F1F1F
 lit-grn: #36B3AC
+drk-grn: #29333
+
+
+======FONTS======
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'EB Garamond', serif;
+font-family: 'Source Sans Pro', sans-serif;
 
 */
 
+/*--------------------------------------------------------------
+>>> CSS STANDARDS
+----------------------------------------------------------------
+1. Place in appropriate section
+2. Add new sections to the Table of Contents as needed
+3. Order properties consistently inside each declaration i.e. alphabetically or by function 
+4. Declaration selectors should each occupy a new line
+5. Enter one new line between rules
+6. Enter more than one new line between categories 
+--------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Settings: used with preprocessors and contain font, colors definitions, etc.
+2.0 - Tools: globally used mixins and functions. Use for preprocessor only.
+3.0 - Generic: reset and/or normalize styles, box-sizing definition, etc.
+4.0 - Elements: styling for bare/generic HTML elements 
+        - Forms
+        - Lists
+        - Media
+        - Tables
+        - Typography: Headings, Paragraphs, Blockquotes, Anchors
+5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
+        - Framework
+6.0 - Components: specific designed components
+        - Buttons
+        - Header
+        - Navigation 
+7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+        - Alignment	    
+        - Color
+        - Size
 
-.pp {
-	background-color: slateblue;
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+3.0 - Generic
+-------------------------------------------------------------- */
+
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box; 
+	-ms-box-sizing: border-box; 
+	box-sizing: border-box;
 }
 
-header p {
-	font-family: 'Montserrat Subrayada', sans-serif;
+/*--------------------------------------------------------------
+4.0 - ELEMENTS 
+-------------------------------------------------------------- */
+
+/*--TYPOGRAPHY--*/
+
+.wrapper p, span, p a, #side li:first-child {
+	font-family: 'EB Garamond', serif;
+} 
+
+h2, h1, .title p, footer a, #side a {
+font-family: 'Montserrat', sans-serif;
 }
 
+h2, h1, .title p, footer a, .title a, .col-1-2 a, #side a {
+text-transform: uppercase;
+}
+	
+h2, #side li {
+	font-size: 13px;
+	letter-spacing: 2px;
+	font-weight: 700;
+}
+
+h2, #side li a, blockquote p:last-child {
+color: #BDBDBD;
+}
+
+h2 {
+padding: 12px 0;
+}
+	
+h1, .title p {
+	font-weight: 700;
+}
+
+a, .title a, .button a {
+	text-decoration: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: white;
+}
+
+span, #side li:first-child {
+	font-style: italic;
+}
+
+#side a {
+	list-style-type: none;
+  	padding: 0;
+	display: block;
+  	width: 150px;
+}
+
+/* -- LISTS -- */ 
+
+footer ul, header ul {
+  list-style-type: none;
+}
+
+#row:last-child, #row col-2-2:last-child {
+  float: right;
+}
+
+footer li, header li {
+	margin-left: 20px;
+	display: inline;
+}
+
+/*--------------------------------------------------------------
+5.0 - OBJECTS 
+-------------------------------------------------------------- */
+
+/* -- IMAGES -- */
+
+#sustainability {
+	background-image: url("../img/starts-with-you.jpg");
+	height: 510px;
+	background-color: cadetblue;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#what-we-do {
+	background-image: url("../img/what-we-do.jpg");
+	height: 410px;
+	background-color: cadetblue;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#sustainability h1, #sustainability h1 .col-1-2 {
+	margin: 0;
+	padding: 0;
+	width: 120;
+}
+
+.logo img {
+	width: 120px;
+	height: 52.2px;
+	margin: 0;
+	padding: 0;
+}
+
+footer img {
+	height: 20px;
+	width: 20px;
+	margin: 10px 5px 4px 5px;
+}
+
+footer .wrapper {
+	width: 98px;
+	margin: 0 auto;
+}
+
+.col-3-2 ul {
+	list-style-image: url('../img/icon.png');
+	width: 380px;
+	padding: 0 0 0 22px;
+	line-height: 24px;
+}
+
+blockquote {
+	border-top: 1px solid #BDBDBD;
+	border-bottom: 1px solid #BDBDBD;
+	padding: 40px 0;
+	margin: 50px 0;
+}
+
+blockquote p:nth-child(2) {
+	font-size: 20px;
+}
+
+blockquote p:last-child {
+	padding: 10px 0;
+}
+
+blockquote img {
+	width: 14.84985px;
+	height: 13.445775px;
+	margin-bottom: 20px;
+}
+
+/* -- FORMS -- */ 
+.col-3-2 li {
+	padding: 0 0 0 16px;
+}
+
+
+.col-1-2, .title, .col-2-2 blockquote {
+	text-align: center;
+}
+	
+.wrapper {
+	width: 1070px;
+}
+
+.wrapper, .col-1-2 {
+	margin: 0 auto;
+}
+
+footer img:hover {
+	opacity: 50%;
+}
+
+/*-------------------------------------------------------------- 
+6.0 - Components: specific designed components
+-------------------------------------------------------------- */
+
+/* --MISC-- */
+
+p, .title .button, #sustainability, .title .button {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* --HEADER-- */
+
+.title span {
+	text-transform: lowercase;
+	line-height: 80px;
+}
+
+.col-2-2 > p {
+	line-height: 46px;
+}
+
+.title span, #what-we-do .title {
+	font-size: 40px;
+}
+
+#what-we-do .title {
+	padding-top: 20px;
+}
+
+.title {
+	color: white;
+	font-size: 65px;
+	line-height: 40px;
+	margin-top: 80px;
+}
+
+.title:first-child p {
+	margin-bottom: 0px;
+}
+
+.title .button {
+	margin-top: 0px;
+}
+
+#sustainability .button {
+	text-align: center;
+}
+
+/* --BODY-- */
+
+#ass {
+	margin: 60px 0 60px 0;
+}
+
+#ass p {
+	text-align: center;
+	width: 820px;
+	margin: auto;
+	padding: 20px;
+}
+
+#ass > p {
+	font-size: 30px;
+}
+
+#ass div > p {
+	width: 680px;
+}
+
+#ass div a, #side li:first-child {
+	color: #36B3AC;
+	text-transform: capitalize;
+	padding: 0px;
+}
+
+#ass div:last-child p {
+	padding: 8px;
+	
+}
+	
+.row {
+	overflow: auto;
+}
+
+#ass div > p, .col-1-2 p {
+	line-height: 25px;
+	font-size: 18px;
+	margin: auto;
+}
+
+.col-1-2:last-child, .col-2-2:last-child, .col-3-2:last-child {
+	float: right;
+}
+
+.col-1-2, .col-2-2, .col-3-2 {
+float: left;
+}
+	
+.col-1-2 {
+	margin: 17px 0 0 0;
+	padding: 0px;
+}
+
+.col-1-2 p {
+	width: 400px;
+}
+
+.col-2-2 > p {
+	font-size: 35px;
+}
+
+.col-2-2 {
+	width: 200px;
+	margin-top: 120px;
+	list-style: none;
+}
+
+.col-2-2:last-child {
+	width:780px;
+}
+
+/* --FOOTER-- */
+
+footer {
+	background-color: #36B3AC;
+	margin-top: 60px;
+}
+
+.drk-gry {
+	background-color: #1F1F1F;
+}
+
+footer ul {
+  	list-style-type: none;
+  	margin: 0 auto;
+  	padding: 15px 0;
+ 	overflow: hidden;
+	width: 695px;
+}
+
+footer li {
+  	float: right;
+}
+
+footer li a {
+  	display: block;
+  	color: white;
+  	text-align: center;
+  	padding: 14px 16px;
+  	text-decoration: none;
+	margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+7.0 - UTILITIES
+-------------------------------------------------------------- */
+
+/* --BUTTONS-- */
+
+#sustainability li:last-child, #what-we-do li:last-child {
+	border: 1px solid white;
+}
+
+#sustainability li:last-child:hover, #what-we-do li:last-child:hover {
+	border: 1px solid #1F1F1F;
+}
+
+.button a, #sustainability li:last-child, #what-we-do li:last-child {
+	text-decoration: none;
+	border-radius: 90px;
+	padding: 0px 13px;
+	font-size: 16px;
+}
+
+.button {
+	padding: 30px;
+}
+
+.button a, #title button, #ass a, footer a, #sustainability a:hover, #sustainability li:last-child, footer img, #what-we-do a {
+	transition-duration: 0.3s;
+}
+
+.button a, #title button {
+	background-color: #36B3AC;
+}
+
+#ass div a:hover {
+	color: #164F4C;
+}
+
+.button a:hover {
+	background-color: #164F4C;
+}
+
+#sustainability a:hover, #what-we-do a:last-child:hover, #side li a:hover {
+	color: #1F1F1F;
+}
+
+.button a:hover, footer a:hover, #sustainability .button a:hover {
+	color: #BDBDBD;
+}
+
+/* -- FORMS -- */ 
